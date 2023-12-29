@@ -23,14 +23,18 @@ public class OrderRepository_Test {
 		
 	// 1. 데이터추가
 	@Test
-	void 테이블추가 () {
+	void 테이블추가 () { // -> 시스템이 입력하는 것은 생략해도 된다.
 	List<Order> list = new ArrayList<>();
 	LocalDate localDate1 = LocalDate.of(2023, 7, 1);
 	LocalDate localDate2 = LocalDate.of(2023, 7, 2);
-	LocalDate localDate3 = LocalDate.of(2023, 7, 3);
+	
 	Order order1 = new Order(1, "둘리", localDate1, "인천 구월동");
 	Order order2 = new Order(2, "또치", localDate2, "인천 연수동");
-	Order order3 = new Order(3, "도우너", localDate3, "인천 동래동");
+	Order order3 = new Order(3, "도우너", LocalDate.of(2023, 7, 3), "인천 동래동");
+	
+//	Order order1 = new Order(0, "둘리", localDate1, "인천 구월동");
+//	Order order2 = new Order(0, "또치", localDate2, "인천 연수동");
+//	Order order3 = new Order(0, "도우너", LocalDate.of(2023, 7, 3), "인천 동래동");
 	
 	list.add(order1);
 	list.add(order2);

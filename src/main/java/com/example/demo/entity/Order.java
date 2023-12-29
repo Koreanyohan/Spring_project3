@@ -28,16 +28,16 @@ import lombok.ToString;
 public class Order {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	int orderNo;
+	int orderNo; // 시스템이 입력
 	
 	@Column(length=30)
-	String customerName;
+	String customerName;  // 사용자가 입력
 	
 	@DateTimeFormat
-	LocalDate orderDate;
+	LocalDate orderDate;  // 사용자가 입력
 	
 	@Column(length=100)
-	String shipAddress;
+	String shipAddress;  // 사용자가 입력
 	
 	
 
